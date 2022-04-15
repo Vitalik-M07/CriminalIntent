@@ -11,6 +11,7 @@ public class CrimeLab {
 
     private List<Crime> mCrimes;
 
+
     public static CrimeLab get(Context context) {
         if (sCrimeLab == null) {
             sCrimeLab = new CrimeLab(context);
@@ -26,11 +27,13 @@ public class CrimeLab {
             crime.setTitle("Crime #" + i);
             crime.setSolved(i % 2 == 0);
             mCrimes.add(crime);
+
         }
     }
 
     public List<Crime> getCrimes() {
         return mCrimes;
+        //проверка работы
     }
 
     public Crime getCrime(UUID id) {
